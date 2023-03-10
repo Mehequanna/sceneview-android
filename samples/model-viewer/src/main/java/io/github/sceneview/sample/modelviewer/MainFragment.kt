@@ -35,7 +35,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 intensity(50_000f)
             }
 
-            val model = sceneView.modelLoader.loadModel("models/MaterialSuite.glb")!!
+            // Animated Model
+//            val model = sceneView.modelLoader.loadModel("models/MaterialSuite.glb")!!
+            // No Animation Model
+            val model = sceneView.modelLoader.loadModel("models/BoomBox.glb")!!
+
             val modelNode = ModelNode(sceneView, model).apply {
                 transform(
                     position = Position(z = -4.0f),
